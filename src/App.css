@@ -1,5 +1,31 @@
+button {
+  all: unset;
+  padding: 10px;
+  background-color: #f1d351;
+  color: #532d08;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer; /* Add cursor for better UX */
+  transition: 0.3s; /* Smooth hover effect */
+  align-items: center;
+  display: flex;
+  justify-content: center; /* Centers text horizontally */
+  align-items: center; /* Centers text vertically */
+  text-align: center; /* Ensures text alignment */
+  width: fit-content;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #f7e296;
+}
+
+.App {
+  font-size: 15px;
+}
+
 h1,
 h2,
 p {
-  padding: 0px;
+  font-family: "MyCustomFont", sans-serif;
 }

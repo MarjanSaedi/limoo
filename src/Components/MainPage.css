@@ -1,0 +1,101 @@
+.specials {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20 px;
+}
+
+.specials h1 {
+  grid-column: 4 / span 2;
+  color: #532d08;
+  font-size: 2em;
+  white-space: nowrap;
+}
+
+.specials button {
+  grid-column: 10 / span 1;
+  justify-self: end;
+}
+
+.specials-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+}
+
+.specials-content .content {
+  grid-column: 4 / span 7;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+}
+
+.specials-content .content div {
+  background-color: rgb(237, 240, 235);
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.specials-content .content div img {
+  width: 100%;
+  max-height: 200px;
+}
+
+.specials-content .content div div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.specials-content .content div div #price {
+  color: red;
+  margin-left: auto;
+}
+
+.specials-content .content div h2,
+.specials-content .content div p {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #64826a;
+}
+.specials-content .content div button {
+  align-self: center; /* Center button horizontally */
+  margin-top: auto; /* Push button to the bottom */
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .specials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .specials h1 {
+    grid-column: 1 / span 2;
+    margin-left: 60px;
+  }
+  .specials button {
+    grid-column: 3 / span 2;
+    margin-right: 40px;
+  }
+
+  .specials-content {
+    display: block;
+  }
+  .specials-content .content {
+    width: 90%;
+    margin-left: 60px;
+    margin-right: 40px;
+  }
+  .specials-content .content div div h2 {
+    font-size: 1em;
+  }
+}

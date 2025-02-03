@@ -1,0 +1,87 @@
+.navbar-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  flex-direction: row;
+  height: 10vh;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  grid-column: 4 / span 2;
+  height: 100%;
+}
+.logo img {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+}
+
+.navbar {
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  grid-column: 6 / span 5;
+  height: 100%;
+}
+
+.navbar li,
+.navbar li .Link {
+  all: unset;
+  padding: 10px;
+  color: #532d08;
+  font-weight: bold;
+}
+.navbar li :hover {
+  border-radius: 10px;
+  background-color: rgb(55, 83, 70);
+  color: white;
+}
+
+.menu-button {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .logo {
+    grid-column: 1 / span 1;
+    margin-left: 40px;
+  }
+  .navbar {
+    grid-column: 2/-1;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-button {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 2 / span1;
+    margin-right: 40px;
+    align-items: center;
+  }
+
+  .logo {
+    grid-column: 1 / span 1;
+  }
+  .navbar {
+    display: none;
+  }
+}
