@@ -1,3 +1,6 @@
+.main-container {
+  margin-bottom: 40px;
+}
 .specials {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
